@@ -29,6 +29,7 @@
   margin: 5px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
  }
  .list-items{
   color: white;

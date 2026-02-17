@@ -1,18 +1,22 @@
-import { useState } from "react";
-
+import { useState, useRef, useEffect } from "react";
+import createElement from "./createElement.js";
 import "./App.css";
 
 function App() {
+  const domRef = useRef(null);
+  useEffect(() => {
+    createElement(domRef.current);
+  }, []);
   return (
     <>
-      <div class="card">
+      <div className="card">
         <h1 className="heading">Developer Profile</h1>
 
         {/* Basic Info */}
         <section className="sections">
           <h2 className="heading">Basic Info</h2>
           <p>
-            <strong>Name: </strong> CyberDude
+            <strong>Name: </strong> Pavithra
           </p>
           <p>
             <strong>Role: </strong> Frontend Developer
@@ -34,19 +38,22 @@ function App() {
         <section className="sections">
           <h2 className="heading">Projects</h2>
 
-          <div class="project">
+          <div className="project">
             <h3 className="sub-heading">Portfolio Website</h3>
             <p className="projDesc">Personal portfolio built using React.</p>
             <span className="projStatus bg-green-500">Status: Completed</span>
           </div>
 
-          <div class="project">
+          <div className="project">
             <h3 className="sub-heading">Task Manager</h3>
             <p className="projDesc">A simple task management app.</p>
             <span className="projStatus bg-blue-500">Status: In Progress</span>
           </div>
         </section>
       </div>
+
+      {/* js dom content*/}
+      <div ref={domRef}></div>
     </>
   );
 }

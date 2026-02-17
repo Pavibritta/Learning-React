@@ -2,7 +2,7 @@ import "./index.css";
 import React from "https://esm.sh/react@19";
 import { createRoot } from "https://esm.sh/react-dom@19/client";
 
-const App = () => {
+ const AppEl = () => {
   const skills = [
     { name: "HTML", color: "bg-purple-500" },
     { name: "CSS", color: "bg-blue-500" },
@@ -69,7 +69,7 @@ const App = () => {
           { className: `font-bold text-blue-600` },
           "Name: ",
         ),
-        "CyberDude",
+        "Pavithra",
       ),
       React.createElement(
         "p",
@@ -141,5 +141,7 @@ const App = () => {
   );
 };
 
-createRoot(document.getElementById("root")).render(React.createElement(App));
-console.log(React.createElement(App));
+createRoot(document.getElementById("root")).render(React.createElement(AppEl));
+console.log(React.createElement(AppEl));
+
+export default AppEl
