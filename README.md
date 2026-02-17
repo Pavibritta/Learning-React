@@ -1,16 +1,24 @@
-# React + Vite
+## Learning Progress
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I am currently learning **React fundamentals**, and so far I have completed:
 
-Currently, two official plugins are available:
+- ✅ **JSX (JavaScript XML)** – Understanding how to write HTML-like syntax in JavaScript.
+- ✅ **DOM vs Virtual DOM** – Learned how React uses a Virtual DOM for efficient UI updates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Repository
 
-## React Compiler
+You can check out the code for this project on my GitHub:  
+[Learning React Repository](https://github.com/Pavibritta/Learning-React)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
