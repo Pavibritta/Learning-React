@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <div className="card">
+        <h1 className="heading">From jsx file</h1>
         <h1 className="heading">Developer Profile</h1>
 
         {/* Basic Info */}

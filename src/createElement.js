@@ -1,96 +1,60 @@
 import "./index.css";
+import "./App.css";
 
 // Create main container
 export default function createElement(rootEl) {
   rootEl.innerHTML = "";
   const parentEl = document.createElement("div");
-  parentEl.classList.add(
-    "card",
-    "bg-white",
-    "rounded",
-    "shadow",
-    "flex",
-    "flex-col",
-    "justify-center",
-    "items-center",
-    "mt-20",
-    "gap-6",
-    "mx-auto",
-    "max-w-3xl",
-    "p-4",
-  );
+  parentEl.style.backgroundColor = "white";
+  parentEl.classList.add("card");
 
   // Heading
   const headingEl1 = document.createElement("h1");
-  headingEl1.classList.add("font-bold", "text-3xl", "text-blue-500");
+  headingEl1.classList.add("heading");
   headingEl1.textContent = "Developer Profile from js dom";
   parentEl.appendChild(headingEl1);
 
   // Heading
   const headingEl = document.createElement("h1");
-  headingEl.classList.add("font-bold", "text-3xl", "text-blue-500");
+  headingEl.classList.add("heading");
   headingEl.textContent = "Developer Profile";
   parentEl.appendChild(headingEl);
 
   // Basic Info Section
   const basicInfoSection = document.createElement("section");
-  basicInfoSection.classList.add(
-    "bg-gray-100",
-    "w-full",
-    "p-4",
-    "rounded",
-    "shadow",
-    "mt-6",
-  );
+  basicInfoSection.classList.add("sections");
 
   const basicHeading = document.createElement("h2");
-  basicHeading.classList.add(
-    "font-semibold",
-    "text-2xl",
-    "text-blue-500",
-    "mb-3",
-  );
+  basicHeading.classList.add("heading");
   basicHeading.textContent = "Basic Info";
 
   const namePara = document.createElement("p");
-  namePara.innerHTML = `<strong class="font-bold text-blue-600">Name: </strong>Pavithra`;
+  namePara.innerHTML = `<strong class="heading">Name: </strong>Pavithra`;
 
   const rolePara = document.createElement("p");
-  rolePara.innerHTML = `<strong class="font-bold text-blue-600">Role: </strong>Frontend Developer`;
+  rolePara.innerHTML = `<strong class="heading">Role: </strong>Frontend Developer`;
 
   basicInfoSection.appendChild(basicHeading);
   basicInfoSection.appendChild(namePara);
   basicInfoSection.appendChild(rolePara);
   parentEl.appendChild(basicInfoSection);
 
-  // ---------- Skills Section ----------
+  //Skills Section
   const skillsSection = document.createElement("section");
-  skillsSection.classList.add(
-    "bg-white",
-    "w-full",
-    "p-4",
-    "rounded",
-    "shadow",
-    "mt-6",
-  );
+  skillsSection.classList.add("sections");
 
   const skillsHeading = document.createElement("h2");
-  skillsHeading.classList.add(
-    "font-semibold",
-    "text-2xl",
-    "text-blue-500",
-    "mb-3",
-  );
+  skillsHeading.classList.add("heading");
   skillsHeading.textContent = "Skills";
 
   const ulEl = document.createElement("ul");
-  ulEl.classList.add("flex", "flex-wrap", "gap-3");
+  ulEl.classList.add("list");
 
   const techSkills = ["HTML", "CSS", "JavaScript", "React"];
   techSkills.forEach((skill) => {
     const liEl = document.createElement("li");
     liEl.textContent = skill;
-    liEl.classList.add("px-4", "py-1", "text-white", "rounded");
+    liEl.classList.add("list-items");
 
     // Assign background colors
     const bgColors = {
@@ -109,26 +73,14 @@ export default function createElement(rootEl) {
 
   // Projects Section
   const projectSection = document.createElement("section");
-  projectSection.classList.add(
-    "bg-white",
-    "w-full",
-    "p-4",
-    "rounded",
-    "shadow",
-    "mt-6",
-  );
+  projectSection.classList.add("sections");
 
   const projectHeading = document.createElement("h2");
-  projectHeading.classList.add(
-    "font-semibold",
-    "text-2xl",
-    "text-blue-500",
-    "mb-4",
-  );
+  projectHeading.classList.add("heading");
   projectHeading.textContent = "Projects";
 
   const projectsContainer = document.createElement("div");
-  projectsContainer.classList.add("flex", "flex-col", "gap-5");
+  // projectsContainer.classList.add("project");
 
   // Project Data Array
   const projects = [
@@ -148,30 +100,18 @@ export default function createElement(rootEl) {
 
   projects.forEach((proj) => {
     const projDiv = document.createElement("div");
-    projDiv.classList.add("bg-gray-100", "p-4", "rounded", "shadow");
+    projDiv.classList.add("project");
 
     const projTitle = document.createElement("h3");
-    projTitle.classList.add(
-      "font-semibold",
-      "text-xl",
-      "text-blue-500",
-      "mb-2",
-    );
+    projTitle.classList.add("sub-heading");
     projTitle.textContent = proj.title;
 
     const projDesc = document.createElement("p");
-    projDesc.classList.add("text-gray-800", "mb-2");
+    projDesc.classList.add("projDesc");
     projDesc.textContent = proj.desc;
 
     const projStatus = document.createElement("span");
-    projStatus.classList.add(
-      "px-3",
-      "py-1",
-      "rounded",
-      "text-white",
-      "shadow",
-      proj.statusColor,
-    );
+    projStatus.classList.add("projStatus", proj.statusColor);
     projStatus.textContent = proj.status;
 
     projDiv.appendChild(projTitle);
